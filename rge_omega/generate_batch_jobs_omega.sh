@@ -10,7 +10,7 @@ JSON_FILE="omega_pass1_0.json"
 # Header
 cat > "$JSON_FILE" <<EOF
 {
-  "name": "omega_pass0_9",
+  "name": "omega_pass1_0",
   "site": "jlab/enp",
   "max_dispatched": 500,
   "jobs": [
@@ -21,7 +21,7 @@ first=1
 for folder in "$INPUT_BASE_DIR"/*/; do
     dir_name=$(basename "$folder")
 
-    skimmed_file="$SKIMMED_DIR/${dir_name}_skim.hipo"
+    skimmed_file="$SKIMMED_DIR/omega_${dir_name}_skim.hipo"
 
     # Create the full command
     cmd=$(cat <<EOF
