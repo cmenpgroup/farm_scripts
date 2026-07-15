@@ -6,7 +6,7 @@ EXT=$2
 # Define variables
 INPUT_BASE_DIR="/cache/clas12/rg-e/production/spring2024/pass1/torus-1/Pb_D2/dst/recon/$RUN"
 SKIMMED_DIR="/work/clas12/mikewood/rg-e/skims/omega"
-SKIMMED_FILE="$SKIMMED_DIR/omega_$RUN_$EXT_skim.hipo"
+SKIMMED_FILE="$SKIMMED_DIR/omega_${RUN}_${EXT}_skim.hipo"
 
 # JSON output
 JSON_FILE="omega_pass1_0_$RUN_$EXT.json"

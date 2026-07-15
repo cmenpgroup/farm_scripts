@@ -5,7 +5,7 @@ RUN=$1
 # Define variables
 INPUT_BASE_DIR="/cache/clas12/rg-e/production/spring2024/pass1/torus-1/Pb_D2/dst/recon/$RUN"
 SKIMMED_DIR="/work/clas12/mikewood/rg-e/skims/omega"
-SKIMMED_FILE="$SKIMMED_DIR/omega_$RUN_skim.hipo"
+SKIMMED_FILE="$SKIMMED_DIR/omega_${RUN}_skim.hipo"
 
 # JSON output
 JSON_FILE="omega_pass1_0_$RUN.json"
@@ -27,7 +27,7 @@ EOF
 
 # Write job object
 echo "    {" >> "$JSON_FILE"
-echo "      \"name\": \"process_$RUN\"," >> "$JSON_FILE"
+echo "      \"name\": \"process_${RUN}\"," >> "$JSON_FILE"
 echo "      \"constraint\": \"el9\"," >> "$JSON_FILE"
 echo "      \"account\": \"clas12\"," >> "$JSON_FILE"
 echo "      \"partition\": \"production\"," >> "$JSON_FILE"
