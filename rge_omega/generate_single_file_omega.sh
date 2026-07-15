@@ -9,7 +9,7 @@ SKIMMED_DIR="/work/clas12/mikewood/rg-e/skims/omega"
 SKIMMED_FILE="$SKIMMED_DIR/omega_${RUN}_${EXT}_skim.hipo"
 
 # JSON output
-JSON_FILE="omega_pass1_0_$RUN_$EXT.json"
+JSON_FILE="omega_pass1_0_${RUN}_${EXT}.json"
 
 # Header
 cat > "$JSON_FILE" <<EOF
@@ -28,7 +28,7 @@ EOF
 
 # Write job object
 echo "    {" >> "$JSON_FILE"
-echo "      \"name\": \"process_$RUN_$EXT\"," >> "$JSON_FILE"
+echo "      \"name\": \"process_${RUN}_${EXT}\"," >> "$JSON_FILE"
 echo "      \"constraint\": \"el9\"," >> "$JSON_FILE"
 echo "      \"account\": \"clas12\"," >> "$JSON_FILE"
 echo "      \"partition\": \"production\"," >> "$JSON_FILE"

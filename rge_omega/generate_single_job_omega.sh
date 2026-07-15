@@ -8,7 +8,7 @@ SKIMMED_DIR="/work/clas12/mikewood/rg-e/skims/omega"
 SKIMMED_FILE="$SKIMMED_DIR/omega_${RUN}_skim.hipo"
 
 # JSON output
-JSON_FILE="omega_pass1_0_$RUN.json"
+JSON_FILE="omega_pass1_0_${RUN}.json"
 
 # Header
 cat > "$JSON_FILE" <<EOF
