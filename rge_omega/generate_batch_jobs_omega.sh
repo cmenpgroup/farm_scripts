@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define variables
-INPUT_BASE_DIR="/cache/clas12/rg-e/production/spring2024/pass1/torus-1/Pb_D2/dst/recon/020082"
+INPUT_BASE_DIR="/cache/clas12/rg-e/production/spring2024/pass1/torus-1/Pb_D2/dst/recon"
 SKIMMED_DIR="/work/clas12/mikewood/rg-e/skims/omega"
 
 # JSON output
