@@ -15,41 +15,36 @@ module load clas12
 
 # Usage 
 ## Large Batch Jobs
-<ol>
-<li>Edit paths in scripts/generate_batch_jobs.sh if needed:</li>
-  <ul>
-    <li>INPUT_BASE_DIR – base directory with input .hipo files</li>
-    <li>SKIMMED_DIR – where outputs will be written</li>
-  </ul>  
-<li>Run the script to generate a SWIF2 JSON workflow:</li>
+1. Edit paths in scripts/generate_batch_jobs_omega.sh if needed:</li>
+  * INPUT_BASE_DIR – base directory with input .hipo files</li>
+  * SKIMMED_DIR – where outputs will be written</li>  
+2. Run the script to generate a SWIF2 JSON workflow:</li>
   
 ```  
 cd scripts   
-./generate_batch_jobs.sh
+./generate_batch_jobs_omega.sh
 ```
 
 ## Job for Single Run Number
-<ol>
-<li>Edit paths in scripts/generate_single_job.sh if needed:</li>
-  <ul>
-    <li>INPUT_BASE_DIR – base directory with input .hipo files</li>
-    <li>SKIMMED_DIR – where outputs will be written</li>
-  </ul>  
-<li>Run the script to generate a SWIF2 JSON workflow:</li>
+1. Edit paths in scripts/generate_single_job.sh if needed:
+  * INPUT_BASE_DIR – base directory with input .hipo files
+  * SKIMMED_DIR – where outputs will be written
+2. Run the script to generate a SWIF2 JSON workflow:
   
 ```  
 cd scripts   
 ./generate_batch_jobs.sh
 ```
 
-<li>Import and submit the workflow to the JLab farm:</li>
+# To Submit a Job
+* Import and submit the workflow to the JLab farm:
 
 ```
 swif2 import -file <file_name>.json 
 swif2 run <workflow-name>
 ```
 
-<li>Monitor jobs:</li>
+* Monitor jobs:
   
 ```
 swif2 status <workflow-name> -jobs
