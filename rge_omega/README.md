@@ -4,7 +4,9 @@ These scripts run the Run Group E analyses for the omega meson on the JLab farm.
 <ul>
 <li>Jefferson Lab environment with CLAS12 software stack: 
 
-`module load clas12`
+```
+module load clas12
+```
 
 </li>  
 <li>SWIF2 workflow manager (/usr/bin/swif2)</li>
@@ -34,6 +36,8 @@ swif2 run <workflow-name>
 
 <li>Monitor jobs:</li>
   
-`swif2 status <workflow-name> -jobs`
+```
+swif2 status <workflow-name> -jobs
+```
 
 </ol>
