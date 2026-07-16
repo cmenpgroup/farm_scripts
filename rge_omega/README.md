@@ -2,7 +2,7 @@ These scripts run the Run Group E analyses for the omega meson on the JLab farm.
 
 # Requirements
 <u>
-<li>Jefferson Lab environment with CLAS12 software stack:\
+<li>Jefferson Lab environment with CLAS12 software stack:  
 `module load clas12`
 </li>  
 <li>SWIF2 workflow manager (/usr/bin/swif2)</li>
