@@ -26,14 +26,14 @@ cd scripts
 ```
 
 ## Job for Single Run Number
-1. Edit paths in scripts/generate_single_job.sh if needed:
+1. Edit paths in scripts/generate_single_job_omega.sh if needed:
   * INPUT_BASE_DIR – base directory with input .hipo files
   * SKIMMED_DIR – where outputs will be written
 2. Run the script to generate a SWIF2 JSON workflow:
   
 ```  
 cd scripts   
-./generate_batch_jobs.sh
+./generate_simple_job_omega.sh <Run>
 ```
 
 # To Submit a Job
