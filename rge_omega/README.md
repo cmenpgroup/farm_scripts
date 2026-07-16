@@ -5,19 +5,23 @@ Requirements
 <li>Jefferson Lab environment with CLAS12 software stack:
 module load clas12
 </li>  
-<li>SWIF2 workflow manager (/usr/bin/swif2)</li>li>
-<li>Access to the JLab /volatile and /work storage areas.</li>li>
+<li>SWIF2 workflow manager (/usr/bin/swif2)</li>
+<li>Access to the JLab /volatile and /work storage areas.</li>
 </ul>
 
 Usage for Large Batch Jobs
-Edit paths in scripts/generate_batch_jobs.sh if needed:
-INPUT_BASE_DIR – base directory with input .hipo files
-SKIMMED_DIR – where outputs will be written
-Run the script to generate a SWIF2 JSON workflow:
+<ol>
+<li>Edit paths in scripts/generate_batch_jobs.sh if needed:</li>
+  <ul>
+    <li>INPUT_BASE_DIR – base directory with input .hipo files</li>
+    <li>SKIMMED_DIR – where outputs will be written</li>
+  </ul>  
+<li>Run the script to generate a SWIF2 JSON workflow:</li>
 cd scripts
-bash generate_batch_jobs.sh
-Import and submit the workflow to the JLab farm:
+./generate_batch_jobs.sh
+<li>Import and submit the workflow to the JLab farm:</li>
 swif2 import -file <file_name>.json
 swif2 run <workflow-name>
-Monitor jobs:
+<li>Monitor jobs:</li>
 swif2 status <workflow-name> -jobs
+</ol>
