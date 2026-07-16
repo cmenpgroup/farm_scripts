@@ -1,6 +1,6 @@
 These scripts run the Run Group E analyses for the omega meson on the JLab farm.
 
-Requirements
+<h2>Requirements</h2>
 <u>
 <li>Jefferson Lab environment with CLAS12 software stack:
 module load clas12
@@ -9,7 +9,7 @@ module load clas12
 <li>Access to the JLab /volatile and /work storage areas.</li>
 </ul>
 
-Usage for Large Batch Jobs
+<h2>Usage for Large Batch Jobs</h2>
 <ol>
 <li>Edit paths in scripts/generate_batch_jobs.sh if needed:</li>
   <ul>
