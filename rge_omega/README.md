@@ -13,9 +13,24 @@ module load clas12
 <li>Access to the JLab /volatile and /work storage areas.</li>
 </ul>
 
-# Usage for Large Batch Jobs
+# Usage 
+## Large Batch Jobs
 <ol>
 <li>Edit paths in scripts/generate_batch_jobs.sh if needed:</li>
+  <ul>
+    <li>INPUT_BASE_DIR – base directory with input .hipo files</li>
+    <li>SKIMMED_DIR – where outputs will be written</li>
+  </ul>  
+<li>Run the script to generate a SWIF2 JSON workflow:</li>
+  
+```  
+cd scripts   
+./generate_batch_jobs.sh
+```
+
+## Job for Single Run Number
+<ol>
+<li>Edit paths in scripts/generate_single_job.sh if needed:</li>
   <ul>
     <li>INPUT_BASE_DIR – base directory with input .hipo files</li>
     <li>SKIMMED_DIR – where outputs will be written</li>
