@@ -25,7 +25,7 @@ These scripts run the Run Group E analyses for the omega meson on the JLab farm.
 
 <li>Import and submit the workflow to the JLab farm:</li>
 
-``swif2 import -file <file_name>.json \ 
+``swif2 import -file <file_name>.json 
 swif2 run <workflow-name>``
 
 <li>Monitor jobs:</li>
