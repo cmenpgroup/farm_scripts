@@ -20,7 +20,7 @@ These scripts run the Run Group E analyses for the omega meson on the JLab farm.
   </ul>  
 <li>Run the script to generate a SWIF2 JSON workflow:</li>
   
-`cd scripts`
+`cd scripts` \
 `./generate_batch_jobs.sh`
 
 <li>Import and submit the workflow to the JLab farm:</li>
