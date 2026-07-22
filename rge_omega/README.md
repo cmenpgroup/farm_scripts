@@ -36,14 +36,6 @@ cd farm_scripts/rge_omega
 ./generate_simple_job_omega.sh <Run>
 ```
 
-# To Submit a Job
-* Import and submit the workflow to the JLab farm:
-
-```
-swif2 import -file <file_name>.json 
-swif2 run <workflow-name>
-```
-
 ## Job for Single File
 1. Edit paths in scripts/generate_single_file_omega.sh if needed:
   * INPUT_BASE_DIR – base directory with input .hipo files
