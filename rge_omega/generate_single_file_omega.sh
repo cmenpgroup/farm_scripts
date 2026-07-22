@@ -22,7 +22,8 @@ EOF
 
 # Create the full command
 cmd=$(cat <<EOF
-hipo-utils -reduce -ct "REC::Particle://pid==211[GT]0//pid==-211[GT]0//pid==22[GT]1//pid==11&&i==0[EQ]1" -o $SKIMMED_FILE $INPUT_BASE_DIR/*_$RUN.evio.$EXT.hipo 
+module load clas12 && \
+ hipo-utils -reduce -ct "REC::Particle://pid==211[GT]0//pid==-211[GT]0//pid==22[GT]1//pid==11&&i==0[EQ]1" -o $SKIMMED_FILE $INPUT_BASE_DIR/*_$RUN.evio.$EXT.hipo 
 EOF
 )
 
