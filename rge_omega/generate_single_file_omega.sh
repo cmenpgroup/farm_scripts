@@ -3,8 +3,33 @@
 RUN=$1
 EXT=$2
 
+if [ $# -ne 2 ]; then
+    echo "Number of inputs must be equal to 2."
+    echo "Usage: ./generate_single_file_omgea.sh <RUN> <EXTENSION>"
+    exit 1
+fi
+
+if [ -z "${EXT//[0-9]}" ] 
+then
+    if [ -n "$EXT" ] 
+    then
+        echo "$EXT is an integer."
+    fi
+else
+    echo "$EXT is not an integer."
+    exit 1
+fi
+
+
 # Define variables
 INPUT_BASE_DIR="/cache/clas12/rg-e/production/spring2024/pass1/torus-1/Pb_D2/dst/recon/$RUN"
+INPUT_FILE="$INPUT_BASE_DIR/*_$RUN.evio.$EXT.hipo"
+
+if ! [[ -e "$INPUT_FILE" ]]; then
+   echo "$INPUT_FILE does not exists."
+   exit 1
+fi
+
 SKIMMED_DIR="/work/clas12/mikewood/rg-e/skims/omega"
 SKIMMED_FILE="$SKIMMED_DIR/omega_${RUN}_${EXT}_skim.hipo"
 
@@ -22,8 +47,7 @@ EOF
 
 # Create the full command
 cmd=$(cat <<EOF
-module load clas12 && \
- hipo-utils -reduce -ct "REC::Particle://pid==211[GT]0//pid==-211[GT]0//pid==22[GT]1//pid==11&&i==0[EQ]1" -o $SKIMMED_FILE $INPUT_BASE_DIR/*_$RUN.evio.$EXT.hipo 
+ hipo-utils -reduce -ct "REC::Particle://pid==211[GT]0//pid==-211[GT]0//pid==22[GT]1//pid==11&&i==0[EQ]1" -o $SKIMMED_FILE $INPUT_FILE 
 EOF
 )
 
